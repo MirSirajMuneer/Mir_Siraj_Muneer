@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Mir Siraj Muneer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body id="body">
+    <header>
+        <div class="container">
+            <h1 class="logo">Mir Siraj Muneer</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" class="theme-toggle-button">
+                <i class="fas fa-moon"></i> Dark Mode
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="project-gallery">
+            <div class="container">
+                <h2>📂 My Portfolio of Work</h2>
+                <p class="subtitle">Showcasing my best work across various disciplines: Python Automation, Graphic Design, Flutter App Development, and Web Development.</p>
+
+                <div class="filters">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Python Automation</button>
+                    <button class="filter-btn">Graphic Design</button>
+                    <button class="filter-btn">Flutter Apps</button>
+                    <button class="filter-btn">Web/Portfolio</button>
+                </div>
+
+                <div class="project-grid">
+                    
+                    <div class="project-item flutter">
+                        <a href="project-flutter-app.html" style="text-decoration: none; color: inherit; display: block;">
+                            <img src="images/placeholder-restaurant-app.jpg" alt="Flutter Restaurant Ordering App Screenshot">
+                            <div class="project-info">
+                                <div>
+                                    <h4>Restaurant Menu & Ordering App 🍔📱</h4>
+                                    <p>A full-featured mobile app built with <strong>Flutter</strong> and <strong>Dart</strong> for browsing menus, placing orders, and handling payments.</p>
+                                    <div class="tags-container">
+                                        <span class="tag">#Flutter</span><span class="tag">#Dart</span><span class="tag">#E-commerceUI</span>
+                                    </div>
+                                </div>
+                                <span class="project-view-link">View Details & Demo →</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="project-item graphic">
+                        <a href="project-canva-design.html" style="text-decoration: none; color: inherit; display: block;">
+                            <img src="images/placeholder-canva-design.jpg" alt="Canva Graphic Design Portfolio">
+                            <div class="project-info">
+                                <div>
+                                    <h4>Canva Graphic Design Portfolio 🎨</h4>
+                                    <p>A showcase of professional logo designs, banners, flyers, and business cards created exclusively using Canva.</p>
+                                    <div class="tags-container">
+                                        <span class="tag">#Canva</span><span class="tag">#GraphicDesign</span><span class="tag">#Branding</span>
+                                    </div>
+                                </div>
+                                <span class="project-view-link">View Gallery & Work Samples →</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="project-item python">
+                        <a href="project-csv-to-excel.html" style="text-decoration: none; color: inherit; display: block;">
+                            <img src="images/placeholder-python-excel.jpg" alt="CSV to Excel Automation Project Image">
+                            <div class="project-info">
+                                <div>
+                                    <h4>CSV to Excel Automation Tool ⚙️</h4>
+                                    <p>A powerful Python script built with Pandas to convert and organize complex CSV files into clean, readable Excel sheets automatically.</p>
+                                    <div class="tags-container">
+                                        <span class="tag">#Python</span><span class="tag">#Automation</span><span class="tag">#Pandas</span>
+                                    </div>
+                                </div>
+                                <span class="project-view-link">View Details & Demo →</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mir Siraj Muneer. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="theme.js"></script> 
+    <script src="script.js"></script>
+</body>
+</html>
