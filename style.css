@@ -14,6 +14,22 @@
     --profile-border-color: #333333; /* Dark gray for light theme */
 }
 
+/* --- Dark Mode Variables and Overrides --- */
+body.dark-mode {
+    --background-color: #2c3e50;  /* Dark blue/grey background */
+    --surface-color: #34495e;    /* Darker blue/grey cards */
+    --text-color: #ecf0f1;       /* Light text */
+    --heading-color: #ffffff;    /* Gold/Yellow headings for contrast */
+    --primary-blue: #3498db;     /* Lighter blue accent */
+    --secondary-blue: #2980b9;
+    --accent-green: #2ecc71;     /* Contrast green */
+    --dark-grey: #bdc3c7;
+    --light-grey: #496179;
+    --border-color: #446077;     /* Darker borders */
+    --shadow-color: rgba(0, 0, 0, 0.4); /* Stronger shadows */
+    --profile-border-color: #ffffff; /* Primary blue for dark theme */
+}
+
 /* --- Base Styling (Applies to ALL pages and themes) --- */
 body {
     font-family: 'Poppins', sans-serif;
@@ -114,6 +130,36 @@ nav ul li a:hover::after {
     }
 }
 
+/* --- Theme Toggle Button Styling (Aesthetic) --- */
+
+.theme-toggle-button {
+    /* Base style for a modern pill shape */
+    background: var(--primary-blue);
+    color: var(--surface-color); /* Button text/icon color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px; /* High radius for pill shape */
+    font-weight: 600;
+    cursor: pointer;
+    display: flex; /* Align icon and text */
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.theme-toggle-button i {
+    font-size: 1em;
+    color: var(--surface-color); /* Icon color matches text */
+    transition: color 0.3s;
+}
+
+.theme-toggle-button:hover {
+    background: var(--secondary-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
 /* --- Hero Section (index.html) --- */
 .hero {
     background: var(--background-color);
@@ -174,6 +220,7 @@ nav ul li a:hover::after {
 .hire-me-button {
     background: var(--primary-blue); 
     box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    color: white; /* Ensure text is white on primary blue */
 }
 
 .hire-me-button:hover {
@@ -830,6 +877,42 @@ footer {
 }
 
 /* ---------------------------------------------------------------------- */
+/* --- DARK MODE OVERRIDES (Aesthetic changes based on class) ----------- */
+/* ---------------------------------------------------------------------- */
+
+/* Dark Mode Overrides for the button */
+body.dark-mode .theme-toggle-button {
+    /* In dark mode, use the accent green for the button */
+    background: var(--accent-green);
+    color: var(--text-color); /* Light text on green background */
+    box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3);
+}
+
+body.dark-mode .theme-toggle-button i {
+    color: var(--text-color);
+}
+
+body.dark-mode .theme-toggle-button:hover {
+    background: #27ae60; /* Slightly darker green on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(46, 204, 113, 0.5);
+}
+
+/* Ensure form inputs look right in dark mode */
+body.dark-mode .form-group input,
+body.dark-mode .form-group select,
+body.dark-mode .form-group textarea {
+    border: 1px solid var(--border-color);
+    background: var(--surface-color);
+    color: var(--text-color);
+}
+
+body.dark-mode .filter-btn {
+    color: var(--text-color);
+}
+
+
+/* ---------------------------------------------------------------------- */
 /* --- RESPONSIVE ADJUSTMENTS (PERFECT MOBILE VIEW) --------------------- */
 /* ---------------------------------------------------------------------- */
 
@@ -871,6 +954,9 @@ footer {
         order: 1; /* Keep theme button accessible */
         margin-left: 0;
         margin-right: 10px;
+        /* Mobile size adjustment for button */
+        padding: 8px 15px;
+        font-size: 0.9em;
     }
     
     /* --- Hero Section --- */
@@ -981,33 +1067,4 @@ footer {
         font-size: 1.3em;
         margin-right: 10px;
     }
-}
-
-/* --- Dark Mode Variables and Overrides --- */
-body.dark-mode {
-    --background-color: #2d6399;  /* Dark blue/grey background */
-    --surface-color: #34495e;    /* Darker blue/grey cards */
-    --text-color: #ecf0f1;       /* Light text */
-    --heading-color: #ffffff;    /* Gold/Yellow headings for contrast */
-    --primary-blue: #3498db;     /* Lighter blue accent */
-    --secondary-blue: #2980b9;
-    --accent-green: #2ecc71;     /* Contrast green */
-    --dark-grey: #bdc3c7;
-    --light-grey: #496179;
-    --border-color: #446077;     /* Darker borders */
-    --shadow-color: rgba(0, 0, 0, 0.4); /* Stronger shadows */
-    --profile-border-color: #ffffff; /* Primary blue for dark theme */
-}
-
-/* Ensure form inputs look right in dark mode */
-body.dark-mode .form-group input,
-body.dark-mode .form-group select,
-body.dark-mode .form-group textarea {
-    border: 1px solid var(--border-color);
-    background: var(--surface-color);
-    color: var(--text-color);
-}
-
-body.dark-mode .filter-btn {
-    color: var(--text-color);
 }
