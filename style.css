@@ -523,7 +523,7 @@ nav ul li a:hover::after {
     margin-bottom: 30px;
 }
 
-/* New Two-Column Grid */
+/* Two-Column Grid */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 2fr; 
@@ -732,7 +732,7 @@ footer {
     line-height: 1.7;
 }
 
-/* Video Embedding */
+/* Video Embedding (if applicable) */
 .video-container {
     position: relative;
     padding-bottom: 56.25%; 
@@ -829,75 +829,185 @@ footer {
     object-fit: contain;
 }
 
-/* --- Responsive Adjustments --- */
+/* ---------------------------------------------------------------------- */
+/* --- RESPONSIVE ADJUSTMENTS (PERFECT MOBILE VIEW) --------------------- */
+/* ---------------------------------------------------------------------- */
+
+/* Target screens up to 992px (Tablets in portrait and large phones) */
 @media (max-width: 992px) {
+    /* --- General Adjustments --- */
+    .container {
+        width: 95%; /* Use slightly more width on smaller screens */
+    }
+    
+    /* --- Header & Navigation --- */
+    header .container {
+        flex-wrap: wrap; /* Allow items to wrap */
+        justify-content: center;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    nav {
+        order: 2; /* Push nav to the bottom row on mobile */
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    nav ul {
+        justify-content: space-around;
+        gap: 5px;
+    }
+    
+    nav ul li {
+        margin-left: 0;
+    }
+    
+    .theme-toggle-button {
+        order: 1; /* Keep theme button accessible */
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    
+    /* --- Hero Section --- */
     .hero .container {
         flex-direction: column;
         text-align: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 
     .hero-content {
         max-width: 100%;
         margin-bottom: 40px;
+        order: 2; /* Content below image on mobile */
     }
 
     .profile-picture {
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
+        margin-bottom: 30px;
+        order: 1; /* Image above content on mobile */
     }
-}
 
-@media (max-width: 900px) {
-    .contact-grid {
-        grid-template-columns: 1fr; /* Stack columns on smaller screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .summary-cards {
-        flex-direction: column;
-    }
-    
     .hero h3 {
         font-size: 2em;
     }
 
-    .project-grid {
-        grid-template-columns: 1fr;
+    .cta-button {
+        display: block;
+        margin: 15px auto;
+        width: 80%;
+        max-width: 300px;
+    }
+
+    /* --- Quick Summary --- */
+    .summary-cards {
+        flex-direction: column; /* Stack cards vertically */
+    }
+    
+    .card {
+        margin-bottom: 20px;
+    }
+    
+    /* --- Contact Page --- */
+    .contact-grid {
+        grid-template-columns: 1fr; /* Stack columns */
+        gap: 30px;
+    }
+
+    .contact-info-panel,
+    .contact-form {
+        padding: 20px;
     }
 }
 
+/* Target screens up to 600px (Standard mobile phones) */
+@media (max-width: 600px) {
+    /* --- General Scaling --- */
+    .hero, .service-list, .project-gallery, .contact-form-section {
+        padding: 40px 0;
+    }
+    
+    h2 {
+        font-size: 2.2em;
+    }
 
-/* --- DARK MODE OVERRIDE (Activated by JS) --- */
-body.dark-mode {
-    --background-color: #121212;
-    --surface-color: #1e1e1e;
-    --text-color: #e0e0e0;
-    --heading-color: #ffffff;
-    --dark-grey: #404040;
-    --light-grey: #2a2a2a;
-    --border-color: #333333;
-    --shadow-color: rgba(0, 0, 0, 0.5);
-    --profile-border-color: #f0f0f0; /* Light gray/white for dark theme */
+    /* --- Navigation --- */
+    nav ul {
+        display: block; /* Stack links vertically */
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+        display: block;
+    }
+
+    /* --- Project Grid --- */
+    .project-grid {
+        grid-template-columns: 1fr; /* Single column layout for projects */
+        gap: 30px;
+    }
+
+    .project-info {
+        min-height: auto;
+    }
+
+    .filter-btn {
+        display: block; /* Stack filter buttons */
+        width: 80%;
+        margin: 8px auto;
+    }
+    
+    /* --- Project Detail Page --- */
+    .screenshot-gallery {
+        grid-template-columns: 1fr; /* Stack screenshots vertically */
+    }
+
+    .app-main-image {
+        max-width: 100%; /* Image takes full width of container */
+        width: 100%;
+    }
+
+    /* --- Contact Page Details --- */
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3em;
+        margin-right: 10px;
+    }
 }
 
-/* --- Theme Toggle Button Styling --- */
-.theme-toggle-button {
+/* --- Dark Mode Variables and Overrides --- */
+body.dark-mode {
+    --background-color: #2d6399;  /* Dark blue/grey background */
+    --surface-color: #34495e;    /* Darker blue/grey cards */
+    --text-color: #ecf0f1;       /* Light text */
+    --heading-color: #ffffff;    /* Gold/Yellow headings for contrast */
+    --primary-blue: #3498db;     /* Lighter blue accent */
+    --secondary-blue: #2980b9;
+    --accent-green: #2ecc71;     /* Contrast green */
+    --dark-grey: #bdc3c7;
+    --light-grey: #496179;
+    --border-color: #446077;     /* Darker borders */
+    --shadow-color: rgba(0, 0, 0, 0.4); /* Stronger shadows */
+    --profile-border-color: #ffffff; /* Primary blue for dark theme */
+}
+
+/* Ensure form inputs look right in dark mode */
+body.dark-mode .form-group input,
+body.dark-mode .form-group select,
+body.dark-mode .form-group textarea {
+    border: 1px solid var(--border-color);
     background: var(--surface-color);
     color: var(--text-color);
-    border: 1px solid var(--border-color);
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.9em;
-    font-weight: 600;
-    margin-left: 20px;
-    transition: all 0.3s ease;
 }
 
-.theme-toggle-button:hover {
-    background: var(--light-grey);
-    color: var(--primary-blue);
-    transform: none; 
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+body.dark-mode .filter-btn {
+    color: var(--text-color);
 }
