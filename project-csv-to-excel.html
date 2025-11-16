@@ -12,7 +12,7 @@
     <header>
         <div class="container">
             <h1 class="logo">Mir Siraj Muneer</h1>
-            <nav>
+            <nav id="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -20,58 +20,47 @@
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
+            <button id="menu-toggle" class="menu-toggle-button">
+                <i class="fas fa-bars"></i>
+            </button>
             <button id="theme-toggle" class="theme-toggle-button">
-                <i class="fas fa-moon"></i> Dark Mode
+                <i class="fas fa-moon"></i>
             </button>
         </div>
     </header>
 
     <main>
-        <section class="project-detail">
+        <section class="project-detail-section">
             <div class="container">
-                <a href="projects.html" class="back-link">← Back to Projects</a>
+                <h2 class="project-title">CSV to Excel Automation Tool</h2>
+                <p class="project-subtitle">An Automation Tool Created On Python</p>
 
-                <div class="app-showcase">
-                    <img src="images/placeholder-python-excel.jpg" alt="CSV to Excel Automation Project Image" class="app-main-image" style="max-width: 600px;">
-                </div>
-
-                <h2>CSV to Excel Automation Tool ⚙️</h2>
-                <div class="project-meta">
-                    <span class="tag">Python</span>
-                    <span class="tag">Automation</span>
-                    <span class="tag">Data Analysis</span>
-                    <span class="tag">Pandas Library</span>
-                </div>
-
-                <p class="summary">
-                    A robust Python script built to streamline the process of converting complex and large CSV files into clean, organized, and structured Excel workbooks. This tool significantly reduces manual data cleaning and manipulation time.
-                </p>
-
-                <div class="detail-section">
-                    <h3>Project Goal and Solution</h3>
-                    <p>The client frequently received data dumps in raw CSV format, requiring hours of manual sorting, filtering, and cross-referencing before it could be used. The goal was to build an automated solution using **Python** and the **Pandas library** to handle these tasks instantly, producing an analysis-ready Excel file.</p>
-                    
-                    <h4 class="gallery-heading">Technical Features</h4>
-                    <ul>
-                        <li><i class="fas fa-check"></i> **Batch Processing:** Handles multiple CSV files from a single input directory.</li>
-                        <li><i class="fas fa-check"></i> **Data Cleaning:** Automatically handles missing values and data type inconsistencies.</li>
-                        <li><i class="fas fa-check"></i> **Structured Output:** Creates multi-sheet Excel workbooks based on defined data categories.</li>
-                        <li><i class="fas fa-check"></i> **Custom Logic:** Integrates custom business rules for filtering and aggregating data points.</li>
-                    </ul>
-                </div>
-                
-                <div class="action-center">
-                    <p>Interested in automating your own data workflows? Contact me for a personalized automation script!</p>
-                    <a href="https://github.com/Siraj7S6" target="_blank" class="cta-button github-button">
-                        <i class="fab fa-github"></i> View Related Code Snippets
+                <div class="project-summary-card">
+                    <h3 class="summary-heading">Project Summary</h3>
+                    <p class="summary-text">
+                        This Automation tool is created on python . it takes csv file as input and convert it into organized excel file. (Currently its version works on small csv files not too large)
+                    </p>
+                    <a href="contact.html" class="cta-button hire-me-button">
+                        <i class="fas fa-envelope"></i> Discuss a Custom Automation Project
                     </a>
                 </div>
 
-                <h3 class="gallery-heading">How It Works</h3>
+                <h3 class="gallery-heading">Project Video Demo</h3>
+                    <div class="video-responsive">
+                        <iframe width="560" height="315" 
+                            src="https://www.youtube.com/embed/dR9B_gPxjkk?list=RDdR9B_gPxjkk" 
+                            title="Project Video Demo" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>s
+                </div>
+                <h3 class="gallery-heading">Interface Showcase</h3>
                 <div class="screenshot-gallery">
-                    <img src="images/placeholder-python-screen-1.jpg" alt="Python script running in terminal">
-                    <img src="images/placeholder-excel-output.jpg" alt="Clean Excel output sheet">
-                    <img src="images/placeholder-data-flow.jpg" alt="Automation workflow diagram">
+                    <img src="images/placeholder-restaurant-screen-1.jpg" alt="Tool Cli Interface">
+                    <img src="images/placeholder-restaurant-screen-2.jpg" alt="Input File Screenshot">
+                    <img src="images/placeholder-restaurant-screen-3.jpg" alt="Output File ScreenShot">
                 </div>
             </div>
         </section>
@@ -82,7 +71,7 @@
             <p>&copy; 2025 Mir Siraj Muneer. All rights reserved.</p>
         </div>
     </footer>
-    <script src="theme.js"></script> 
     <script src="script.js"></script>
 </body>
 </html>
+

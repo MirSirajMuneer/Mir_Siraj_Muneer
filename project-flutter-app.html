@@ -12,7 +12,7 @@
     <header>
         <div class="container">
             <h1 class="logo">Mir Siraj Muneer</h1>
-            <nav>
+            <nav id="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -20,53 +20,42 @@
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
+            <button id="menu-toggle" class="menu-toggle-button">
+                <i class="fas fa-bars"></i>
+            </button>
             <button id="theme-toggle" class="theme-toggle-button">
-                <i class="fas fa-moon"></i> Dark Mode
+                <i class="fas fa-moon"></i>
             </button>
         </div>
     </header>
 
     <main>
-        <section class="project-detail">
+        <section class="project-detail-section">
             <div class="container">
-                <a href="projects.html" class="back-link">← Back to Projects</a>
+                <h2 class="project-title">Restaurant Menu & Ordering App</h2>
+                <p class="project-subtitle">A Flutter-based mobile application for modern dining experiences.</p>
 
-                <div class="app-showcase">
-                    <img src="images/placeholder-restaurant-app.jpg" alt="Restaurant Menu & Ordering App Mockup" class="app-main-image">
-                </div>
-
-                <h2>Restaurant Menu & Ordering App 🍔📱</h2>
-                <div class="project-meta">
-                    <span class="tag">Flutter/Dart</span>
-                    <span class="tag">Mobile Development</span>
-                    <span class="tag">E-commerce UI</span>
-                    <span class="tag">Firebase/Backend</span>
-                </div>
-
-                <p class="summary">
-                    A comprehensive mobile application developed for a modern restaurant, enabling customers to effortlessly browse the full menu, customize their orders, and complete transactions, enhancing the dining experience both in-house and for takeout.
-                </p>
-
-                <div class="detail-section">
-                    <h3>Project Goal and Solution</h3>
-                    <p>The core objective was to replace traditional paper menus with a dynamic digital platform. I utilized **Flutter** for fast cross-platform development and **Dart** for a clean, scalable codebase, integrating a backend (e.g., Firebase) to handle real-time menu updates and order management.</p>
-                    
-                    <h4 class="gallery-heading">Technical Highlights</h4>
-                    <ul>
-                        <li><i class="fas fa-check"></i> **Dynamic Menu:** Real-time data fetching to update menu items, prices, and availability instantly.</li>
-                        <li><i class="fas fa-check"></i> **Order Customization:** Allows users to add toppings, choose sizes, and specify preparation notes.</li>
-                        <li><i class="fas fa-check"></i> **Shopping Cart Logic:** Robust state management to handle item quantity, price calculation, and coupon codes.</li>
-                        <li><i class="fas fa-check"></i> **Modern UI/UX:** Clean, food-focused interface design, ensuring easy navigation for all age groups.</li>
-                    </ul>
-                </div>
-                
-                <div class="action-center">
-                    <p>Looking to digitalize your business? This scalable architecture can be adapted to any retail or ordering system.</p>
+                <div class="project-summary-card">
+                    <h3 class="summary-heading">Project Summary</h3>
+                    <p class="summary-text">
+                        This application demonstrates a complete food ordering and reservation system, built with Flutter for cross-platform compatibility. It features a responsive menu, cart management, and a reservation booking module. The structure is robust and can be adapted to any retail or ordering system.
+                    </p>
                     <a href="contact.html" class="cta-button hire-me-button">
                         <i class="fas fa-envelope"></i> Discuss a Custom App Project
                     </a>
                 </div>
 
+                <h3 class="gallery-heading">Project Video Demo</h3>
+                    <div class="video-responsive">
+                        <iframe width="560" height="315" 
+                            src="https://www.youtube.com/embed/dR9B_gPxjkk?list=RDdR9B_gPxjkk" 
+                            title="Project Video Demo" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>s
+                </div>
                 <h3 class="gallery-heading">Interface Showcase</h3>
                 <div class="screenshot-gallery">
                     <img src="images/placeholder-restaurant-screen-1.jpg" alt="App Menu Screen">
@@ -82,7 +71,7 @@
             <p>&copy; 2025 Mir Siraj Muneer. All rights reserved.</p>
         </div>
     </footer>
-    <script src="theme.js"></script> 
     <script src="script.js"></script>
 </body>
 </html>
+

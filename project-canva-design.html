@@ -12,7 +12,7 @@
     <header>
         <div class="container">
             <h1 class="logo">Mir Siraj Muneer</h1>
-            <nav>
+            <nav id="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -20,58 +20,47 @@
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
+            <button id="menu-toggle" class="menu-toggle-button">
+                <i class="fas fa-bars"></i>
+            </button>
             <button id="theme-toggle" class="theme-toggle-button">
-                <i class="fas fa-moon"></i> Dark Mode
+                <i class="fas fa-moon"></i>
             </button>
         </div>
     </header>
 
     <main>
-        <section class="project-detail">
+        <section class="project-detail-section">
             <div class="container">
-                <a href="projects.html" class="back-link">← Back to Projects</a>
+                <h2 class="project-title">Canva Graphic Design Portfolio</h2>
+                <p class="project-subtitle">Samples of My Designs</p>
 
-                <div class="app-showcase">
-                    <img src="images/placeholder-canva-design.jpg" alt="Canva Graphic Design Portfolio" class="app-main-image" style="max-width: 600px;">
-                </div>
-
-                <h2>Canva Graphic Design Portfolio 🎨</h2>
-                <div class="project-meta">
-                    <span class="tag">Canva</span>
-                    <span class="tag">Branding</span>
-                    <span class="tag">Social Media</span>
-                    <span class="tag">Marketing Collateral</span>
-                </div>
-
-                <p class="summary">
-                    A collection of high-quality visual content created exclusively using **Canva Pro**. This portfolio showcases design proficiency in logos, banners, social media posts, and marketing flyers, demonstrating strong aesthetic sense and quick turnaround times.
-                </p>
-
-                <div class="detail-section">
-                    <h3>Design Philosophy and Deliverables</h3>
-                    <p>My approach centers on creating clean, professional, and visually engaging designs that align perfectly with the client's brand identity. While I specialize in the efficiency and accessibility of Canva, the focus is always on delivering professional-grade results.</p>
-                    
-                    <h4 class="gallery-heading">Design Categories</h4>
-                    <ul>
-                        <li><i class="fas fa-check"></i> **Logo Design:** Simple, memorable, and scalable brand marks.</li>
-                        <li><i class="fas fa-check"></i> **Social Media Banners:** Optimized headers for Facebook, LinkedIn, and YouTube.</li>
-                        <li><i class="fas fa-check"></i> **Marketing Flyers & Posters:** Print-ready designs for events and promotions.</li>
-                        <li><i class="fas fa-check"></i> **Business Cards & Letterheads:** Consistent professional stationary design.</li>
-                    </ul>
-                </div>
-                
-                <div class="action-center">
-                    <p>Ready for professional visuals for your brand? Let's design something great!</p>
+                <div class="project-summary-card">
+                    <h3 class="summary-heading">Project Summary</h3>
+                    <p class="summary-text">
+                        Here is some of my Graphic Designing Work ! you will See logos , Banners , Bussiness Cards , Fivers , Thumbnails i work on every type of designing tasks
+                    </p>
                     <a href="contact.html" class="cta-button hire-me-button">
-                        <i class="fas fa-envelope"></i> Request a Design Quote
+                        <i class="fas fa-envelope"></i> Discuss a Custom Design
                     </a>
                 </div>
 
-                <h3 class="gallery-heading">Sample Work Gallery</h3>
+                <h3 class="gallery-heading">Designs Video</h3>
+                    <div class="video-responsive">
+                        <iframe width="560" height="315" 
+                            src="https://www.youtube.com/embed/dR9B_gPxjkk?list=RDdR9B_gPxjkk" 
+                            title="Project Video Demo" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>s
+                </div>
+                <h3 class="gallery-heading">Graphic Designs</h3>
                 <div class="screenshot-gallery">
-                    <img src="images/placeholder-canva-logo.jpg" alt="Sample Logo Design">
-                    <img src="images/placeholder-canva-banner.jpg" alt="Sample Social Media Banner">
-                    <img src="images/placeholder-canva-flyer.jpg" alt="Sample Marketing Flyer">
+                    <img src="images/placeholder-restaurant-screen-1.jpg" alt="Logo">
+                    <img src="images/placeholder-restaurant-screen-2.jpg" alt="Banner">
+                    <img src="images/placeholder-restaurant-screen-3.jpg" alt="Bussiness card>
                 </div>
             </div>
         </section>
@@ -82,7 +71,7 @@
             <p>&copy; 2025 Mir Siraj Muneer. All rights reserved.</p>
         </div>
     </footer>
-    <script src="theme.js"></script> 
     <script src="script.js"></script>
 </body>
 </html>
+

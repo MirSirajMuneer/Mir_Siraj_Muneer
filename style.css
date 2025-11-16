@@ -1068,3 +1068,120 @@ body.dark-mode .filter-btn {
         margin-right: 10px;
     }
 }
+
+/* Add the new menu button styling */
+.menu-toggle-button {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5em;
+    cursor: pointer;
+    display: none; /* Hide by default on desktop */
+    z-index: 200; /* Ensure it's above the nav when open */
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+/* New: Prevent scrolling of the background when the menu is open on mobile */
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* --- Mobile / Tablet Styles (max-width: 900px) --- */
+@media (max-width: 900px) {
+    /* 1. Show the hamburger menu button */
+    .menu-toggle-button {
+        display: block; /* Show the hamburger icon on mobile/tablet */
+    }
+
+    /* Adjust button order and spacing in the header container */
+    header .container {
+        justify-content: space-between;
+        /* Aligns Logo to left, and Menu Toggle/Theme Toggle to right */
+    }
+    
+    /* 2. Hide the main navigation by default and set up the slide-in panel */
+    header nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70%; /* Width of the side panel */
+        max-width: 300px;
+        height: 100vh;
+        background-color: var(--surface-color); 
+        box-shadow: -5px 0 15px var(--shadow-color);
+        transform: translateX(100%); /* Initially hide the menu off-screen */
+        transition: transform 0.4s ease-in-out;
+        z-index: 100;
+        padding-top: 100px; /* Space for the fixed header content */
+        display: flex; /* Use flex to align content vertically */
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    /* 3. Style the navigation list for vertical alignment */
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 30px;
+        margin: 0;
+        list-style: none;
+        display: flex;
+    }
+
+    header nav ul li {
+        margin: 15px 0; /* Vertical spacing for links */
+    }
+    
+    header nav ul li a {
+        font-size: 1.2em;
+    }
+
+    /* 4. State for when the menu is open (toggled by JS) */
+    header nav.nav-open {
+        transform: translateX(0); /* Slide the menu into view */
+    }
+    
+    /* 5. Keep the theme toggle button visible but out of the main nav list */
+    /* If you want the theme toggle INSIDE the slide-out menu, you need to move its HTML */
+    /* For now, it stays separate next to the menu button on the main header */
+
+}
+/* Remove the old mobile nav override from the 600px media query to let the new rule take over */
+@media (max-width: 600px) {
+    /* ... existing styles ... */
+    
+    /* REMOVED/OVERRIDDEN: nav ul, nav ul li display rules are now handled by the 900px block above */
+    /* ... existing styles ... */
+}
+
+/* New: Responsive YouTube Embed Styling */
+.video-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0 15px; /* Add some padding on the sides */
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio (56.25% for 16/9) */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 8px; /* Matches your project image corners */
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
